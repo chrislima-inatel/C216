@@ -10,7 +10,7 @@ function helloWorld(req, res, next) {
 	res.setHeader('content-type', 'application/json');
 	res.charSet('UTF-8');
 	var now = new Date();
-	res.send(`Greetings world @ ${now} !!!`);
+	res.send('Greetings world @ ${now} !!!');
 	next();
 };
 
@@ -19,5 +19,5 @@ server.get('/hello', helloWorld);
 var port = process.env.PORT || 5000;
 
 server.listen(port, function() {
-	console.log(`${server.name} rodando`);
+	console.log('${server.name} rodando');
 });
